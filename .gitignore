@@ -23,3 +23,4 @@ _temp/
 *.wlf
 transcript
 modelsim.ini
+*.txt
