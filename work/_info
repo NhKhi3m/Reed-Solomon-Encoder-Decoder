@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/AD/Downloads/Reed-Solomon-Encoder-Decoder-main/Reed-Solomon-Encoder-Decoder-main/Src
+vberlekamp_massey
+!s110 1777114635
+!i10b 1
+!s100 L_gn`ih]aY3b1anOA08h11
+IdI^zQ<YC`Km>XQ[^bn:3:2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1777114621
+8berlekamp_massey.v
+Fberlekamp_massey.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1777114635.000000
+!s107 berlekamp_massey.v|
+!s90 -reportprogress|300|berlekamp_massey.v|
+!i113 1
+Z3 tCvgOpt 0
+vgf28_mult
+Z4 !s110 1777114109
+!i10b 1
+!s100 53nfBIY3]5]4`92eejzUX3
+IbAn7acj_QSXW`dR0NS=Xa3
+R1
+R0
+Z5 w1776594411
+8quartus_gf28_mult.v
+Fquartus_gf28_mult.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z6 !s108 1777114109.000000
+Z7 !s107 tb_syndrome_calc.v|tb_gf28_mult.v|tb_berlekamp_massey.v|syndrome_calc.v|stimulus.v|rs_encoder.v|quartus_gf28_mult.v|berlekamp_massey.v|
+Z8 !s90 -reportprogress|300|berlekamp_massey.v|quartus_gf28_mult.v|rs_encoder.v|stimulus.v|syndrome_calc.v|tb_berlekamp_massey.v|tb_gf28_mult.v|tb_syndrome_calc.v|
+!i113 1
+R3
+vrs_encoder
+R4
+!i10b 1
+!s100 C88lFkC6DQz@kKHOMAGh[2
+I`_RZLdHK]zaGl8E6lUo=i1
+R1
+R0
+R5
+8rs_encoder.v
+Frs_encoder.v
+L0 1
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
+vsyndrome_calc
+R4
+!i10b 1
+!s100 KzeHe=bMVnQN;AS6ESAf<3
+IIoCBPalhfi]zI?`8edkh;0
+R1
+R0
+w1776594474
+8syndrome_calc.v
+Fsyndrome_calc.v
+L0 1
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
+vtb_berlekamp_massey
+R4
+!i10b 1
+!s100 RCFX7I[k6=HmRNGNV3G_L1
+I;UcWH9SQIP=YYdg0RkaYA1
+R1
+R0
+w1777113580
+8tb_berlekamp_massey.v
+Ftb_berlekamp_massey.v
+L0 3
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
+vtb_gf28_mult
+R4
+!i10b 1
+!s100 Z:<f?YM<cLg>jJ4ARDGG=3
+IG7J;iP`ghT=O?`]SLNzSc0
+R1
+R0
+R5
+8tb_gf28_mult.v
+Ftb_gf28_mult.v
+L0 3
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
+vtb_rs_encoder
+R4
+!i10b 1
+!s100 i<K13G@g:M2?6Zz<DgfR;0
+IOI1;AY>?eTNWEV8H4NM3z2
+R1
+R0
+R5
+8stimulus.v
+Fstimulus.v
+L0 3
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
+vtb_syndrome_calc
+R4
+!i10b 1
+!s100 lnT7L7387ezP[g<G]GA`l3
+I0EU97o@dW7l8h2`TN@5Zf0
+R1
+R0
+w1776594503
+8tb_syndrome_calc.v
+Ftb_syndrome_calc.v
+L0 3
+R2
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R3
