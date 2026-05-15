@@ -24,3 +24,6 @@ _temp/
 transcript
 modelsim.ini
 *.txt
+*.mti
+*.mpf
+wlft*

@@ -71,7 +71,7 @@ module berlekamp_massey (
     // =====================================================================
     reg [7:0] temp_delta;
     always @(*) begin
-        temp_delta = S[k];
+        temp_delta = gf_mult(Lambda[0], S[k]);
         for (idx = 1; idx <= 16; idx = idx + 1) begin
             if (idx <= L && k >= idx) begin
                 temp_delta = temp_delta ^ gf_mult(Lambda[idx], S[k-idx]);
@@ -118,12 +118,12 @@ module berlekamp_massey (
                 end
 
                 UPDATE: begin
-                    if (delta != 8'h00) begin 
-                        // Cap nhat Lambda = (gamma * Lambda) XOR (delta * B)
-                        for (i = 0; i <= 16; i = i + 1) begin
-                            Lambda[i] <= gf_mult(gamma, Lambda[i]) ^ gf_mult(delta, B[i]);
-                        end
+                    // ALWAYS update Lambda to maintain proportional scaling
+                    for (i = 0; i <= 16; i = i + 1) begin
+                        Lambda[i] <= gf_mult(gamma, Lambda[i]) ^ gf_mult(delta, B[i]);
+                    end
 
+                    if (delta != 8'h00) begin 
                         // Neu 2*L <= k, cap nhat lai B = old_Lambda va L, gamma
                         if ((L << 1) <= k) begin
                             for (i = 0; i <= 16; i = i + 1) B[i] <= Lambda[i];

@@ -7,16 +7,16 @@ module rs_encoder (
     output reg valid_out        // Co bao hieu du lieu dau ra hop le
 );
 
-    // 1. Dinh nghia cac he so cua da thuc sinh g(x)
-    wire [7:0] g [0:31];
-    assign g[0]  = 8'h2D; assign g[1]  = 8'hD8; assign g[2]  = 8'hAB; assign g[3]  = 8'h8B;
-    assign g[4]  = 8'h4A; assign g[5]  = 8'h36; assign g[6]  = 8'hFC; assign g[7]  = 8'h8B;
-    assign g[8]  = 8'h77; assign g[9]  = 8'hD1; assign g[10] = 8'hE1; assign g[11] = 8'hF0;
-    assign g[12] = 8'hAC; assign g[13] = 8'h0B; assign g[14] = 8'hE8; assign g[15] = 8'h45;
-    assign g[16] = 8'h95; assign g[17] = 8'h3E; assign g[18] = 8'hB4; assign g[19] = 8'hD7;
-    assign g[20] = 8'h1D; assign g[21] = 8'h6F; assign g[22] = 8'h01; assign g[23] = 8'h1C;
-    assign g[24] = 8'h3C; assign g[25] = 8'h5A; assign g[26] = 8'hD0; assign g[27] = 8'h30;
-    assign g[28] = 8'h94; assign g[29] = 8'h64; assign g[30] = 8'h5D; assign g[31] = 8'h17;
+   // 1. Dinh nghia 32 nghiem tu alpha^1 den alpha^32 cua truong GF(2^8)
+     wire [7:0] g [0:31];
+    assign g[0]  = 8'h2D; assign g[1]  = 8'hD8; assign g[2]  = 8'hEF; assign g[3]  = 8'h18;
+    assign g[4]  = 8'hFD; assign g[5]  = 8'h68; assign g[6]  = 8'h1B; assign g[7]  = 8'h28;
+    assign g[8]  = 8'h6B; assign g[9]  = 8'h32; assign g[10] = 8'hA3; assign g[11] = 8'hD2;
+    assign g[12] = 8'hE3; assign g[13] = 8'h86; assign g[14] = 8'hE0; assign g[15] = 8'h9E;
+    assign g[16] = 8'h77; assign g[17] = 8'h0D; assign g[18] = 8'h9E; assign g[19] = 8'h01;
+    assign g[20] = 8'hEE; assign g[21] = 8'hA4; assign g[22] = 8'h52; assign g[23] = 8'h2B;
+    assign g[24] = 8'h0F; assign g[25] = 8'hE8; assign g[26] = 8'hF6; assign g[27] = 8'h8E;
+    assign g[28] = 8'h32; assign g[29] = 8'hBD; assign g[30] = 8'h1D; assign g[31] = 8'hE8;
 
     // 2. Khai bao 32 thanh ghi (Registers) cho mach LFSR
     reg [7:0] lfsr [0:31];
