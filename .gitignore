@@ -27,3 +27,7 @@ modelsim.ini
 *.mti
 *.mpf
 wlft*
+
+#Bỏ qua các file vibe
+*.py
+*.md

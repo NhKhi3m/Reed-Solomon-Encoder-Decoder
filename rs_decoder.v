@@ -107,18 +107,18 @@ module rs_decoder (
     //    Khi error_flag = 0:
     //      data_out = delay_line[353] -> byte giu nguyen
     // =========================================================================
-    reg [7:0] delay_line [0:545];
+    reg [7:0] delay_line [0:353];
     integer i;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            for (i = 0; i <= 545; i = i + 1) delay_line[i] <= 8'd0;
+            for (i = 0; i <= 353; i = i + 1) delay_line[i] <= 8'd0;
             data_out <= 8'd0;
             valid_out <= 1'b0;
         end else begin
             // Dich du lieu lien tuc (shift register)
             delay_line[0] <= data_in;
-            for (i = 1; i <= 545; i = i + 1) begin
+            for (i = 1; i <= 353; i = i + 1) begin
                 delay_line[i] <= delay_line[i-1];
             end
 
