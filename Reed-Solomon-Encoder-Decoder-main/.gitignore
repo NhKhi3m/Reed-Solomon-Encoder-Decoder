@@ -1,0 +1,33 @@
+# Bỏ qua các thư mục tạm của Quartus
+db/
+incremental_db/
+output_files/
+simulation/
+
+# Bỏ qua các file báo cáo và cấu hình rác của Quartus
+*.rpt
+*.summary
+*.done
+*.jdi
+*.pin
+*.qws
+*.bak
+
+# Bỏ qua các file nhị phân nạp board
+*.sof
+*.pof
+
+# Bỏ qua các thư mục và file sinh ra từ ModelSim
+work/
+_temp/
+*.wlf
+transcript
+modelsim.ini
+*.txt
+*.mti
+*.mpf
+wlft*
+
+#Bỏ qua các file vibe
+*.py
+*.md
